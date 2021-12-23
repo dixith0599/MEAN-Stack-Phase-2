@@ -1,0 +1,70 @@
+<div class="container bg-light py-5">
+    <h1 class="display-5 fw-bold" style="text-align: center; color: rgb(188, 243, 188);">Welcomess</h1><br><br>
+    <h2 class="col-md-8 fs-4">This Test Contains 10 Questions</h2><br><br>
+    
+    <br><h3>Rules:</h3>
+    <ol>
+        <li>Correct question gives you 3 points</li>
+        <li>Incorrect question leads you -1 points</li>
+        <li>You will have 1 minute for each question to answer</li>
+        <li>Refreshing the page will reset the quiz</li>
+    </ol>
+    <h1 style="font-family: Sans-serif; text-align: center;">Best of Luck....!</h1>
+    <div class="name col-md-4 my-3">
+        <form [formGroup]="username" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Enter User Name</label>
+                <input #name type="text" formControlName="name" class="form-control"
+                [ngClass]="{'is-invalid':submitted && f['name'].errors}">
+                <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                    <div *ngIf="f['name'].errors['required']">
+                        User Name can't be empty
+                    </div>
+                </div>
+            </div><br>
+            <div class="form-group">
+                <button class="btn btn-primary">Start Test</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- <div class="container-fluid">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 class="display-5 fw-bold" style="text-align: center; color: rgb(188, 243, 188);">Welcome</h1><br><br>
+        </div>
+        <div class="card" >
+            <div class="card-body">
+                <h2 class="card-title">This Test Contains 10 Questions</h2>
+                <h3 class="card-text"><br>Rules:</h3>
+                  <ol class="card-text">
+                      <li>Correct question gives you 3 points</li>
+                      <li>Incorrect question leads you -1 points</li>
+                      <li>You will have 1 minute for each question to answer</li>
+                      <li>Refreshing the page will reset the quiz</li>
+                  </ol>
+                  <div class="name col-md-4 my-3">
+                    <form [formGroup]="username" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label>Enter User Name</label>
+                            <input #name type="text" formControlName="name" class="form-control"
+                            [ngClass]="{'is-invalid':submitted && f['name'].errors}">
+                            <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                                <div *ngIf="f['name'].errors['required']">
+                                    User Name can't be empty
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="form-group">
+                            <button class="btn btn-primary">StartTest</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+              <div class="card-footer text-muted">
+                2 days ago
+              </div></div>
+        
+      </div>
+</div>
+ -->
